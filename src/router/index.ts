@@ -7,8 +7,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Layout',
+    component: () => import(/* webpackChunkName: "layout" */ '../views/layout/Layout.vue'),
   },
   {
     path: '/about',

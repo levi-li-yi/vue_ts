@@ -66,8 +66,8 @@ module.exports = {
     devServer: {
         open: true,
         port: 9090,
-        compress: true,
-        noInfo: true,
+        //compress: true,
+        //noInfo: true,
         overlay: {
             warning: true,
             errors: true
