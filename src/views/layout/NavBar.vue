@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import {Vue, Prop, Model, Component, Emit} from 'vue-property-decorator'
+import {Vue, Prop, Component, Emit} from 'vue-property-decorator'
 
 interface Search {
   value: string
