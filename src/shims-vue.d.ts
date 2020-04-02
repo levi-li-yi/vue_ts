@@ -5,6 +5,7 @@ declare module '*.vue' {
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $Message: any
+    $Message: any,
+    //$store: any
   }
 }
