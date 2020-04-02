@@ -2,12 +2,14 @@
 	<div class="sys_page_header">
 		<input type="text" v-model="search.value">
 		<p>{{search.value}}</p>
+		<p>系统：{{sysToken}}</p>
 		<button @click="submit">提交</button>
 	</div>
 </template>
 
 <script lang="ts">
 import {Vue, Prop, Component, Emit} from 'vue-property-decorator'
+import {State, Getter, Action} from 'vuex-class'
 
 interface Search {
   value: string
@@ -15,9 +17,21 @@ interface Search {
 
 @Component
 export default class NavBar extends Vue{
+  //@State('token') stateToken;
+	//@Getter('token') getterToken;
+	//@Action('token') setToken;
+
+  @State token
+	@Action setToken
+	
   @Prop({default: ''}) title: string;
   private search: Search = {
 	  value: ''
+	};
+  
+  get sysToken() {
+    // return this.stateToken
+    return this.token
 	}
 	
 	mounted() {
@@ -27,6 +41,8 @@ export default class NavBar extends Vue{
 	}
 	@Emit('submitSuccess')
 	submit() {
+    const value = 'abc'
+    this.setToken(value)
     return this.search.value
 	}
 }
