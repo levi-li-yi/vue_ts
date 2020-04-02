@@ -41,8 +41,8 @@ export default class NavBar extends Vue{
 	}
 	@Emit('submitSuccess')
 	submit() {
-    const value = 'abc'
-    this.setToken(value)
+    const value = 'abc';
+    this.setToken(value);
     return this.search.value
 	}
 }
