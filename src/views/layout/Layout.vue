@@ -7,6 +7,7 @@
 			</el-header>
 			<el-container class="bottom_container">
 				<el-aside>
+					<SideBar></SideBar>
 				</el-aside>
 				<!--aside-->
 				<el-container class="main-container">
@@ -27,11 +28,13 @@
 import {Component, Vue} from 'vue-property-decorator';
 import AppMain from './components/AppMain';
 import NavBar from './components/NavBar.vue'
+import SideBar from './components/SideBar.vue'
 
 @Component({
 	components: {
     AppMain,
-    NavBar
+    NavBar,
+    SideBar
 	}
 })
 export default class Layout extends Vue{
@@ -45,8 +48,14 @@ export default class Layout extends Vue{
 </script>
 
 <style lang="scss">
+	.sys_page_container{
+		height: 100%;
+	}
 	html, body, .el-container, .el-aside, .app-main {
 		height: 100%;
+	}
+	.el-container{
+		flex: 1;
 	}
 	.bottom_container{
 		height: calc(100% - 50px);
@@ -65,6 +74,7 @@ export default class Layout extends Vue{
 	}
 	.el-aside {
 		z-index: 999;
+		width: auto!important;
 	}
 	.el-picker-panel{
 		.el-date-table td.in-range div{

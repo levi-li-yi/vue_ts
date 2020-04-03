@@ -1,6 +1,5 @@
 <template>
 	<div class="sys_header">
-	
 	</div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
 	<el-scrollbar>
 		<el-menu class="sys_sidebar">
-			<el-submenu>
-				<el-menu-item></el-menu-item>
+			<el-submenu index="/">
+				<el-menu-item index="/p"></el-menu-item>
 			</el-submenu>
 		</el-menu>
 	</el-scrollbar>
@@ -18,6 +18,6 @@ export default class SideBar extends Vue{
 
 <style lang="scss">
 	.sys_sidebar{
-		width: ;
+		width: 200px;
 	}
 </style>
