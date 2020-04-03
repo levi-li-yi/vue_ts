@@ -74,14 +74,16 @@ module.exports = {
         },
         // 除去控制台日志
         clientLogLevel: 'none',
-        /*proxy: {
+        proxy: {
             '/api': {
-                target: '',
+                target: 'http://localhost:9527/mock-api/v1',
+                changeOrigin: true,
+                ws: true,
                 pathRewrite: {
                     '^/api': ''
                 }
             }
-        }*/
+        }
     },
     // 构建时多核启动
     parallel: require('os').cpus().length > 1

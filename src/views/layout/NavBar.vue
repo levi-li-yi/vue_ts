@@ -53,10 +53,6 @@ export default class NavBar extends Vue{
     const infos = getModule(Info);
     return infos.count
 	}
-	public created() {
-    const infos = getModule(Info);
-    console.log(infos.count);
-  }
 	
 	public mounted() {
     setTimeout(() => {
@@ -67,6 +63,10 @@ export default class NavBar extends Vue{
 	submit() {
     const value = 'abc';
     this.setToken(value);
+    const infos = getModule(Info);
+    infos.decr(100).then((res) => {
+      console.log(res);
+    })
     return this.search.value
 	}
 }
