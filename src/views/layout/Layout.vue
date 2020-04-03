@@ -6,6 +6,8 @@
 				<NavBar></NavBar>
 			</el-header>
 			<el-container class="bottom_container">
+				<el-aside>
+				</el-aside>
 				<!--aside-->
 				<el-container class="main-container">
 					<el-header height="40px">
